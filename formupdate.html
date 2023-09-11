@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Registration Form sept</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <form id="myForm" onsubmit="validateForm(event)">
+    <div id="registrationFields">
+      <label for="name">Name:</label>
+      <input type="text" id="name" oninput="clearFieldStyles(event)">
+      <p id="nameError" class="error-message"></p>
+
+      <label for="email">Email:</label>
+
+      <input type="text" id="email" oninput="clearFieldStyles(event)" onblur="checkExistingUser(event)">
+
+      <p id="emailError" class="error-message"></p>
+
+      <label for="password">Password:</label>
+      <input type="password" id="password" oninput="clearFieldStyles(event)">
+      <p id="passwordError" class="error-message"></p>
+
+      <button type="submit" class="submit">Register</button>
+
+      <button type="button" class="login" onclick="toggleSections()">Login</button>
+      <div id="successMessage" class="success-message" style="display: none;"></div>
+
+    </div>
+    <div id="loginFields" style="display: none;">
+      <label for="login-email">Login Email:</label>
+      <input type="text" id="login-email" oninput="clearFieldStyles(event)">
+      <p id="loginEmailError" class="error-message"></p>
+
+      <label for="login-password">Login Password:</label>
+      <input type="password" id="login-password" oninput="clearFieldStyles(event)">
+      <p id="loginPasswordError" class="error-message"></p>
+      <div id="loginMessage"></div>
+      <button type="button" class="login" onclick="performLogin()">Login</button>
+      <button type="button" class="
+      submit" onclick="performtogle2()">Register</button>
+    </div>
+  </form>
+  <script src="script.js">
+
+  </script>
+</body>
+
+</html>
